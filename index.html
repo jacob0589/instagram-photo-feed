@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"> </script>
+    <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"> </script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="principal">
+        <div class="bg-body-tertiary d-flex">
+            <div class="instagramlogo  d-flex m-2 p-2">
+                <i class="fa-brands fa-instagram mt-2"></i>
+                <p class="m-1"><strong>Instagram</strong></p>
+            </div>
+            <div class="optionsmenu d-flex position-absolute top-0 end-0 m-2 p-2">
+                <div class="Modal me-1">
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Create a new post
+                    </button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="message-text"
+                                                class="col-form-label"><strong>Caption:</strong></label>
+                                            <textarea placeholder="Add the caption of your post here" class="form-control text-black-50"
+                                                id="message-text"></textarea>
+                                        </div>
+                                    </form>
+                                    <button type="button" class="btn btn-light"><i
+                                            class="fa-solid fa-camera"></i></button>
+                                    <button type="button" class="btn btn-light"><i
+                                            class="fa-solid fa-location-dot"></i></button>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-success">Publish</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle "" type=" button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                        <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tab-header">
+            <ul class=" nav justify-content-center">
+                <li class="nav-item">
+                    <a href="#pubs" class="nav-link active" role="tab" data-bs-toggle="tab"><i
+                            class="fa-solid fa-table-cells"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#photos" class="nav-link" role="tab" data-bs-toggle="tab"><i
+                            class="fa-solid fa-square"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="pubs">
+                <div class="container text-center mw-100">
+                    <div class="row" >
+                        <div class="col-4 mb-2 ">
+                            <img src="/Img/perros.jpg" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="col-4 mb-2">
+                            <img src="/Img/Dubrovnik-Croatia.jpg" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="col-4 mb-2 ">
+                            <img src="/Img/friends-happy-190821.jpg" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="col-4 mb-2 ">
+                            <img src="/Img/perros.jpg" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="col-4 mb-2">
+                            <img src="/Img/Dubrovnik-Croatia.jpg" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="col-4 mb-2">
+                            <img src="/Img/friends-happy-190821.jpg" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="col-4 mb-2">
+                            <img src="/Img/perros.jpg" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="col-4 mb-2">
+                            <img src="/Img/Dubrovnik-Croatia.jpg" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="col-4 mb-2 ">
+                            <img src="/Img/friends-happy-190821.jpg" style="width: 100%; height: 100%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane " id="photos">
+                <div class="col d-flex flex-column position-absolute top-10 start-50 translate-middle-x">
+                    <div class="card m-2" style="width: 32rem;">
+                        <div class="card-head d-flex m-1 ">
+                            <p> My Crazy Dog Spark!</p>
+                            <p class="position-absolute top-1 end-0 me-1">08/26</p>
+                        </div>
+                        <div class="card-img">
+                            <img src="/Img/perros.jpg" style="width: 32rem; height: 27rem;">
+                        </div>
+                        <div class="card-foot  m-1 ">
+                            <p class="m-0"><strong>204 Likes</strong></p>
+                            <p class="fs-15 m-0">This is an example of a very good photo that you can post on Instagram
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card m-2" style="width: 32rem;">
+                        <div class="card-head d-flex m-1 ">
+                            <p> The greatness of Croatia</p>
+                            <p class="position-absolute top-1 end-0 me-1">04/09</p>
+                        </div>
+                        <div class="card-img">
+                            <img src="/Img/Dubrovnik-Croatia.jpg" style="width: 32rem; height: 27rem;">
+                        </div>
+                        <div class="card-foot  m-1 ">
+                            <p class="m-0"><strong>26985 Likes</strong></p>
+                            <p class="fs-15 m-0">This is an example of a very good photo that you can post on Instagram
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card m-2" style="width: 32rem;">
+                        <div class="card-head d-flex m-1 ">
+                            <p> Amazing GOAL by Cristiano!</p>
+                            <p class="position-absolute top-1 end-0 me-1">06/109</p>
+                        </div>
+                        <div class="card-img">
+                            <img src="/Img/ronaldo.jpg" style="width: 32rem; height: 54rem;">
+                        </div>
+                        <div class="card-foot  m-1 ">
+                            <p class="m-0"><strong>385752 Likes</strong></p>
+                            <p class="fs-15 m-0">This is an example of a very good photo that you can post on Instagram
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
